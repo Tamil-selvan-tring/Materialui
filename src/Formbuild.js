@@ -30,11 +30,11 @@ setmfd("");
 setmfdyear("");
 setStatus("add");
 }
-	const deleteCard=(id) =>{
+	const deleteitem=(id) =>{
 		let updateitem = card.filter(item => item.id != id);
 		setCard(updateitem);
 	}
-	const editCard=(id) =>{
+	const edititem=(id) =>{
 		let edititem = card.filter(item => item.id == id);
 		setName(edititem[0].name);
 		setType(edititem[0].type);
@@ -124,8 +124,8 @@ setStatus("add");
                           </Typography>
                         </CardContent>
                         <CardActions>
-                          <Button onClick={()=>{editCard(e.id)}}>Edit</Button>
-                          <Button onClick={()=>{deleteCard(e.id)}}>Delete</Button>
+                          <Button onClick={()=>{edititem(e.id)}}>Edit</Button>
+                          <Button onClick={()=>{deleteitem(e.id)}}>Delete</Button>
                         </CardActions>
                       </Card>	 			
 				    )
